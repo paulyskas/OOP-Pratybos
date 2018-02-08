@@ -19,7 +19,6 @@ int main()
 
     cout << "Iveskit savo varda\n";
     cin >> vardas;
-    cout << vardas << "\n";
     char kas = vardas.back();
 
     if( kas == 's') sveikas ="* Sveikas, ";
@@ -27,13 +26,11 @@ int main()
 
     visas = sveikas+vardas+"! *";
 
-    int t{visas.length()};
-
     for (int m = 0; m < k; m++ )
     {
         if( m  == 0 || m == 4)
         {
-            for( int i = 0; i < t; i++)
+            for( int i = 0; i < visas.length(); i++)
             {
                 cout << "*";
             }
@@ -42,7 +39,7 @@ int main()
         if ( m == 1 || m == 3)
         {
             cout << "*";
-            for( int i = 0; i < t-2; i++)
+            for( int i = 0; i < visas.length()-2; i++)
             {
                 cout << " ";
             }
